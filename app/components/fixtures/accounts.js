@@ -10,10 +10,7 @@ const accounts = [
             'dollars': '681',
             'cents': '00'
         },
-        'payment-made': {
-            'dollars': '681',
-            'cents': '00'
-        },        
+        'payment-made': null,        
         'action': {
             'label': 'Pay Now',
             'route': '#'
@@ -30,6 +27,25 @@ const accounts = [
         'balance': {
             'dollars': '2,888',
             'cents': '03'
+        },
+        'payment-due': null,
+        'payment-made': {
+            'dollars': '167',
+            'cents': '56'
+        },        
+        'action': null,
+        'next-day-date': {
+            'month': 'Feb',
+            'day': '10'
+        },
+        'icon': 'check-edit'
+    },
+    {
+        'title': 'Free Checking',
+        'account-number': '6785432180',
+        'balance': {
+            'dollars': '643',
+            'cents': '09'
         },
         'payment-due': null,
         'payment-made': {
