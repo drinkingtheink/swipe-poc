@@ -1,0 +1,22 @@
+.swiper-container {
+    width: 600px;
+    height: 300px;
+    margin-top: -30px;
+}
+
+.swipe-stage {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.swiper-slide {
+    width: 100%;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+    top: auto !important;
+    bottom: 0;
+}
