@@ -1,13 +1,13 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
         {{#swiper-container 
-            currentSlide=currentSlide
-            loop=swiperOptions.loop
-            pagination=swiperOptions.pagination
-            direction=swiperOptions.direction
-            grabCursor=swiperOptions.grabCursor
-            navigation=swiperOptions.navigation
-            speed=swiperOptions.speed
+            loop=loop
+            pagination=pagination
+            direction=direction
+            grabCursor=grabCursor
+            navigation=navigation
+            speed=speed
+            centeredSlides=centeredSlides
         }}
             {{#each accounts as |account|}}
                 {{#swiper-slide}}{{account-card account=account}}{{/swiper-slide}}
@@ -26,7 +26,7 @@
         <button 
             class="loop-toggle"
             onclick={{action "toggleLoop"}}
-        >{{if swiperOptions.loop 'Turn Loop Off' 'Turn Loop On'}}</button>
+        >{{if loop 'Turn Loop Off' 'Turn Loop On'}}</button>
     </div>
 
     <div class="param param-direction">
@@ -34,6 +34,6 @@
         <button 
             class="loop-toggle"
             onclick={{action "updateDirection"}}
-        >{{if (eq swiperOptions.direction 'horizontal') 'Make Vertical' 'Make Horizontal'}}</button>
+        >{{if (eq direction 'horizontal') 'Make Vertical' 'Make Horizontal'}}</button>
     </div>
 </section> 

@@ -9,6 +9,10 @@
     text-transform: uppercase;
     position: relative;
 
+    @media only screen and (max-width: $sml-device) {
+        width: 85vw;
+    }
+
     h1,
     h2,
     h3,
@@ -44,23 +48,21 @@
             font-size: 400%;
             margin-top: -10px;
         }
-
-        .balance-info {
- 
-         }
     }
+
+    .account-card-title,
+    .balance-info {
+        -webkit-text-stroke: 1.25px $app-grey;
+     }
+
     .account-card-secondary-display {
         margin-top: 1rem;
         display: flex;
         justify-content: space-between;
-
-        .balance-info {
-            font-weight: bold;
-        }
     }
 
     .account-card-actions {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         border-top: 1px solid rgba(black, .2);
         display: flex;
         justify-content: center;

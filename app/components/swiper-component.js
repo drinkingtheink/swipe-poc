@@ -7,30 +7,29 @@ const altDir = 'vertical';
 export default Component.extend({
     swiperInstance: null,
     accounts: accounts,
-    swiperOptions: {
-        direction: defaultDir,
-        loop: false,
-        grabCursor: true,
-        navigation: true,
-        speed: 600,
-        slidesPerView: 1,
-        pagination: true,
-    },
+    direction: defaultDir,
+    loop: false,
+    grabCursor: true,
+    navigation: true,
+    speed: 600,
+    slidesPerView: 1,
+    pagination: true,
+    centeredSlides: true,
     
     actions: {
         updateTiming(time) {
             let newTime = time.target.value;
-            this.set('swiperOptions.speed', newTime);
+            this.set('speed', newTime);
         },
         toggleLoop() {
-            let currentPref = this.get('swiperOptions.loop');
+            let currentPref = this.get('loop');
             let updatedPref = !currentPref;
-            this.set('swiperOptions.loop', updatedPref);
+            this.set('loop', updatedPref);
         },
         updateDirection() {
-            let currentDir = this.get('swiperOptions.direction');
+            let currentDir = this.get('direction');
             let updatedDir = (currentDir === defaultDir) ? altDir : defaultDir;
-            this.set('swiperOptions.direction', updatedDir);
+            this.set('direction', updatedDir);
         }
     },
 });

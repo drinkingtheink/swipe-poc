@@ -2,9 +2,15 @@
     margin-top: -30px;
 }
 
+$swiper-container-height: 350px;
+
 .swiper-container {
     width: 600px;
-    height: 350px;
+    height: $swiper-container-height;
+
+    @media only screen and (max-width: $sml-device) {
+        width: 100vw;
+    }
 }
 
 .swipe-stage {
@@ -12,8 +18,28 @@
     display: flex;
     justify-content: center;
     align-content: center;
+
+    @media only screen and (max-width: $sml-device) {
+        width: 100vw;
+    }
 }
 
 .swiper-slide {
     width: 100%;
 }
+
+@mixin swiper-btn {
+    opacity: 1;
+    transition: opacity .5s;
+
+    @media only screen and (max-width: $sml-device) {
+        opacity: 0 !important;
+    }    
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-button-disabled {
+    @include swiper-btn;
+}
+
