@@ -26,9 +26,25 @@
     .account-card-icon {
         position: absolute;
         top: 1rem;
-        right: 2rem;
+        right: 3rem;
         font-size: 700%;
         opacity: .2;
+
+        @media only screen and (max-width: $sml-device) {
+            right: 1rem;
+        }
+    }
+
+    .account-cpfm-icon {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: $app-blue;
+        -webkit-text-stroke: 1px $app-blue;
+
+        &:before {
+            font-size: 250%;
+        }
     }
 
     .account-card-title {
@@ -65,12 +81,13 @@
         margin-top: 1.5rem;
         border-top: 1px solid rgba(black, .2);
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
 
         .account-card-action {
             display: inline-block;
             padding: 1rem .5em .5em .5em;
             color: $app-blue;
+            text-transform: none;
 
             &:hover {
                 cursor: pointer;

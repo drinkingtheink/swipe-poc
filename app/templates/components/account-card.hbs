@@ -1,5 +1,9 @@
 <i class="account-card-icon {{account.icon}}" />
 
+{{#if account.cpfm-agg-account}}
+    <i class="account-cpfm-icon icon-layers" />
+{{/if}}
+
 <h2 class="account-card-title">{{account.title}}</h2>
 <h4 class="account-card-number">{{account.account-number}}</h4>
 
@@ -37,7 +41,9 @@
 
 <section class="account-card-actions">
     {{#if account.action}}
-        <span class='account-card-action'>{{account.action.label}}</span>
+            {{#each account.action as |action|}}
+                <span class='account-card-action'>{{action.label}}</span>
+            {{/each}}
     {{else}}
         <span class='account-card-action'><i class="icon-options" /></span>
     {{/if}}

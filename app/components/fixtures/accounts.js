@@ -12,10 +12,15 @@ const accounts = [
             'cents': '00'
         },
         'payment-made': null,        
-        'action': {
-            'label': 'Pay Now',
-            'route': '#'
-        },
+        'action': [
+            {
+                'label': 'Pay Now',
+                'route': '#'
+            },
+            {
+                'label': 'View More'
+            }
+        ],
         'next-day-date': {
             'label': 'Next Day',
             'month': 'Feb',
@@ -42,7 +47,8 @@ const accounts = [
             'month': 'Dec',
             'day': '22'
         },
-        'icon': 'icon-pie-chart'
+        'icon': 'icon-pie-chart',
+        'cpfm-agg-account': true,
     },
     {
         'title': 'Free Checking',
@@ -59,7 +65,30 @@ const accounts = [
         },        
         'action': null,
         'next-day-date': null,
-        'icon': 'icon-globe'
+        'icon': 'icon-globe',
+        'cpfm-agg-account': true,
+    },
+    {
+        'title': 'Vacation Savings',
+        'account-number': '66644433321',
+        'balance': {
+            'dollars': '6,432',
+            'cents': '53'
+        },
+        'payment-due': null,
+        'payment-made': {
+            'label': 'Payment Made',
+            'dollars': '740',
+            'cents': '50'
+        },        
+        'action': [
+            {
+                'label': 'Deposit More',
+                'route': '#'
+            }
+        ],
+        'next-day-date': null,
+        'icon': 'icon-plane'
     }
 ]
 
