@@ -1,4 +1,4 @@
-<i class="account-card-icon icon-graph" />
+<i class="account-card-icon {{account.icon}}" />
 
 <h2 class="account-card-title">{{account.title}}</h2>
 <h4 class="account-card-number">{{account.account-number}}</h4>
@@ -11,6 +11,34 @@
 
 <p class="account-card-label">{{accountBalanceLabel}}</p>
 
-<section class="account-card-actions">
+<section class="account-card-secondary-display">
+    {{#if account.payment-due}}
+        <div class="payment-due-wrapper">
+            <span class="account-payment-due balance-info">${{account.payment-due.dollars}}.{{account.payment-due.cents}}</span>
+            <p class="account-card-label">{{account.payment-due.label}}</p>
+        </div>
+    {{/if}}
 
+    {{#if account.payment-made}}
+        <div class="payment-made-wrapper">
+            <span class="account-payment-made balance-info">${{account.payment-made.dollars}}.{{account.payment-made.cents}}</span>
+            <p class="account-card-label">{{account.payment-made.label}}</p>
+        </div>
+    {{/if}}
+
+    {{#if account.next-day-date}}
+        <div class="next-day-date-wrapper">
+            <span class="account-next-day-date balance-info">{{account.next-day-date.month}} {{account.next-day-date.day}}</span>
+            <p class="account-card-label">{{account.next-day-date.label}}</p>
+        </div>
+    {{/if}}
+</section>
+
+
+<section class="account-card-actions">
+    {{#if account.action}}
+        <span class='account-card-action'>{{account.action.label}}</span>
+    {{else}}
+        <span class='account-card-action'><i class="icon-options" /></span>
+    {{/if}}
 </section>

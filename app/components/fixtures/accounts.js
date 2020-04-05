@@ -7,6 +7,7 @@ const accounts = [
             'cents': '75'
         },
         'payment-due': {
+            'label': 'Payment Due',
             'dollars': '681',
             'cents': '00'
         },
@@ -16,10 +17,11 @@ const accounts = [
             'route': '#'
         },
         'next-day-date': {
+            'label': 'Next Day',
             'month': 'Feb',
             'day': '10'
         },
-        'icon': 'check-edit'
+        'icon': 'icon-graph'
     },
     {
         'title': 'Free Checking',
@@ -30,15 +32,17 @@ const accounts = [
         },
         'payment-due': null,
         'payment-made': {
+            'label': 'Payment Made',
             'dollars': '167',
             'cents': '56'
         },        
         'action': null,
         'next-day-date': {
-            'month': 'Feb',
-            'day': '10'
+            'label': 'Next Day',
+            'month': 'Dec',
+            'day': '22'
         },
-        'icon': 'check-edit'
+        'icon': 'icon-pie-chart'
     },
     {
         'title': 'Free Checking',
@@ -49,15 +53,13 @@ const accounts = [
         },
         'payment-due': null,
         'payment-made': {
+            'label': 'Payment Made',
             'dollars': '167',
             'cents': '56'
         },        
         'action': null,
-        'next-day-date': {
-            'month': 'Feb',
-            'day': '10'
-        },
-        'icon': 'check-edit'
+        'next-day-date': null,
+        'icon': 'icon-globe'
     }
 ]
 

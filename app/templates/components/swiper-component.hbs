@@ -1,13 +1,39 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <!-- Slides -->
-        {{#each accounts as |account|}}
-            <div class="swiper-slide">{{account-card account=account}}</div>
-        {{/each}}        
+        {{#swiper-container 
+            currentSlide=currentSlide
+            loop=swiperOptions.loop
+            pagination=swiperOptions.pagination
+            direction=swiperOptions.direction
+            grabCursor=swiperOptions.grabCursor
+            navigation=swiperOptions.navigation
+            speed=swiperOptions.speed
+        }}
+            {{#each accounts as |account|}}
+                {{#swiper-slide}}{{account-card account=account}}{{/swiper-slide}}
+            {{/each}}
+        {{/swiper-container}}
+    </div>
+</div>
+
+<section class="swiper-params">
+    <div class="param param-speed">
+        <p>Speed: <input type="number" value={{swiperOptions.speed}} onchange={{action "updateTiming"}} /></p>
     </div>
 
-    <div class="swiper-pagination"></div>
+    <div class="param param-speed">
+        Loop: 
+        <button 
+            class="loop-toggle"
+            onclick={{action "toggleLoop"}}
+        >{{if swiperOptions.loop 'Turn Loop Off' 'Turn Loop On'}}</button>
+    </div>
 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-</div>
+    <div class="param param-direction">
+        Direction: 
+        <button 
+            class="loop-toggle"
+            onclick={{action "updateDirection"}}
+        >{{if (eq swiperOptions.direction 'horizontal') 'Make Vertical' 'Make Horizontal'}}</button>
+    </div>
+</section> 

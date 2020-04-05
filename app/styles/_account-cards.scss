@@ -1,7 +1,7 @@
 .account-card {
     background-color: white;
     width: 75%;
-    height: 75%;
+    height: 17em;
     margin: 0 auto;
     padding: 1em;
     border-radius: 10px;
@@ -27,6 +27,14 @@
         opacity: .2;
     }
 
+    .account-card-title {
+
+    }
+
+    .account-card-number {
+        margin-top: .25rem;
+    }
+
     .account-card-balance-display {
         display: flex;
         align-items: flex-start;
@@ -41,9 +49,30 @@
  
          }
     }
+    .account-card-secondary-display {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        .balance-info {
+            font-weight: bold;
+        }
+    }
 
     .account-card-actions {
         margin-top: 1rem;
         border-top: 1px solid rgba(black, .2);
+        display: flex;
+        justify-content: center;
+
+        .account-card-action {
+            display: inline-block;
+            padding: 1rem .5em .5em .5em;
+            color: $app-blue;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }

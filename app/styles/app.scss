@@ -14,6 +14,15 @@ html {
     overflow: hidden;
     font-size:16px;
     color: $app-grey;
+    background-color: $app-light-grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: uppercase;
 }
 
 h1 {
@@ -23,4 +32,10 @@ h1 {
 .banner-area {
     height: 10em;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+    h4 {
+        text-align: center;
+        padding-top: 5%;
+        color: white;
+    }
 }
