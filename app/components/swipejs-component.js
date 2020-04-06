@@ -5,10 +5,10 @@ import Swipe from 'swipejs';
 export default Component.extend({
     accounts: accounts,
     swipejs: Swipe,
-    swiperjsInstance: null,
+    swipejsInstance: null,
 
     didInsertElement() {
-        this.swiperjsInstance = new Swipe(document.getElementById('slider'), {
+        this.swipejsInstance = new Swipe(document.getElementById('slider'), {
             startSlide: 0,
             speed: 400,
             auto: 0,
