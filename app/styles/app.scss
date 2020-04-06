@@ -2,7 +2,6 @@
 @import './swiper-base-styles';
 @import './_palette';
 @import './_breakpoints';
-@import './swiper-q2-styles';
 @import './_account-cards';
 
 body,
@@ -12,10 +11,10 @@ html {
     margin: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    font-size:16px;
+    font-size: 16px;
     color: $app-grey;
     background-color: $app-light-grey;
+    padding-bottom: 20rem;
 }
 
 h1,
@@ -40,3 +39,30 @@ h1 {
         color: white;
     }
 }
+
+@mixin swipe-overlap {
+    margin-top: -30px;
+}
+
+@mixin swipe-library-stage {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    @media only screen and (max-width: $sml-device) {
+        width: 100vw;
+    }
+}
+
+@mixin swipe-library-container {
+    width: 600px;
+
+    @media only screen and (max-width: $sml-device) {
+        width: 100vw;
+    }
+}
+
+@import './swiper-q2-styles';
+@import './swipejs-q2-styles';

@@ -1,28 +1,14 @@
 .swiper-library {
-    margin-top: -30px;
+    @include swipe-overlap;
 }
-
-$swiper-container-height: 350px;
 
 .swiper-container {
-    width: 600px;
-    height: $swiper-container-height;
-
-    @media only screen and (max-width: $sml-device) {
-        width: 100vw;
-    }
+    @include swipe-library-container;
+    height: 350px;
 }
 
-.swipe-stage {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-    @media only screen and (max-width: $sml-device) {
-        width: 100vw;
-    }
+.swiper-stage {
+    @include swipe-library-stage;
 }
 
 .swiper-slide {

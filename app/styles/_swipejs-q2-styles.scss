@@ -1,0 +1,31 @@
+.swipejs-stage {
+    margin-top: -30px;
+}
+
+.swipejs-container {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    @include swipe-library-container;
+    margin: 0 auto;
+}
+
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+}
+
+.swipe-wrap > div {
+    float: left;
+    position: relative;
+}
+
+.swipejs-card-wrapper {
+
+    &:hover {
+        cursor: grab;
+    }
+
+}
+
