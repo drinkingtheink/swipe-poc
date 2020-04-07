@@ -4,6 +4,10 @@
     display: flex;
     justify-content: center;
 
+    @media only screen and (max-width: $sml-device) {
+        display: block;
+    }
+
     .param {
         @include appTextStroke;
         text-transform: uppercase;
@@ -20,9 +24,11 @@
         padding: .5rem .75rem; 
         border-radius: 5px;
         text-transform: uppercase;
+        transition: all .2s;
 
         &:hover {
             cursor: pointer;
+            background-color: $app-blue;
         }
     }
 }

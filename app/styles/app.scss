@@ -40,7 +40,7 @@ h1 {
 
     h4 {
         text-align: center;
-        padding-top: 5%;
+        padding-top: 3rem;
         color: white;
     }
 }
@@ -57,6 +57,31 @@ h1 {
 
     &:hover {
         opacity: 1;
+    }
+}
+
+.about {
+    display: block;
+    padding: 1.5rem;
+    width: 50%;
+    border-radius: 10px;
+    margin: 8rem auto 3rem auto;
+    border: 2px solid rgba(black, .2);
+    text-align: center;
+    background-color: rgba(black, .05);
+    transition: all .3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $app-grey;
+
+    @media only screen and (max-width: $sml-device) {
+        width: 70%;
+    }
+
+    &:hover {
+        border: 2px solid black;
+        background-color: rgba(black, .4);
+        color: white;
     }
 }
 
