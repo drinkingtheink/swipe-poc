@@ -1,7 +1,25 @@
-<div id="slider" class="swipejs-container">
+<div id={{componentID}} class="swipejs-container">
     <div class="swipe-wrap">
         {{#each accounts as |account|}}
             <div class="swipejs-card-wrapper">{{account-card account=account}}</div>
         {{/each}}
     </div>
 </div>
+
+<section class="library-props">
+    <p class="param param-speed">
+        Swipe Speed: 
+        <input type="number" value={{speed}} onchange={{action "updateSpeed" }} />
+    </p>
+    <p class="param param-direction">
+        Loop: 
+        <button 
+            class="loop-toggle"
+            onclick={{action "toggleContinuity"}}
+        >{{if continuous 'Turn Off Loop' 'Loop Me'}}</button>
+    </p>
+    <p class="param param-speed">
+        Loop Speed (ms): 
+        <input type="number" value={{auto}} onchange={{action "updateAutoSpeed"}} />
+    </p>
+</section>

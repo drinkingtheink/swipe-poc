@@ -68,7 +68,7 @@
 
     .account-card-title,
     .balance-info {
-        -webkit-text-stroke: 1.25px $app-grey;
+        @include appTextStroke;
      }
 
     .account-card-secondary-display {

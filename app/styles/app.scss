@@ -2,7 +2,12 @@
 @import './swiper-base-styles';
 @import './_palette';
 @import './_breakpoints';
-@import './_account-cards';
+
+$appMaxWidth: 1200px;
+
+@mixin appTextStroke {
+    -webkit-text-stroke: 1.25px $app-grey;
+}
 
 body,
 html {
@@ -40,12 +45,27 @@ h1 {
     }
 }
 
+.library-documentation {
+    margin-left: .5rem;
+    padding: .25em .75rem;
+    background-color: rgba(black, .7);
+    color: white;
+    opacity: .8;
+    transition: all .2s;
+    text-decoration: none;
+    border-radius: 5px;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
 @mixin banner-overlap {
     margin-top: -30px;
 }
 
 @mixin swipe-library-stage {
-    max-width: 1200px;
+    max-width: $appMaxWidth;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -64,5 +84,7 @@ h1 {
     }
 }
 
+@import './_account-cards';
+@import './_library-props';
 @import './swiper-q2-styles';
 @import './swipejs-q2-styles';
