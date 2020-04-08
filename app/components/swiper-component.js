@@ -15,6 +15,9 @@ export default Component.extend({
     slidesPerView: 1,
     pagination: true,
     centeredSlides: true,
+    keyboard: {
+        enabled: true
+    },
     
     actions: {
         updateTiming(time) {
