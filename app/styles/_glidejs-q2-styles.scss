@@ -26,6 +26,19 @@
         }
     }
 
+    .glide__arrows {
+        width: 100%;
+
+        .glide__arrow {
+            border: none;
+            color: $app-grey;
+        }
+
+        .glide__arrow--right {
+            right: 0;
+        }
+    }
+
     .glide__bullets {
         width: 100%;
         text-align: center;
