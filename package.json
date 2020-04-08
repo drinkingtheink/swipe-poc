@@ -57,6 +57,7 @@
     "node": "8.* || >= 10.*"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "swipejs": "^2.2.16"
   }
 }

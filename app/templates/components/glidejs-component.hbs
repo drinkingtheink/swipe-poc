@@ -1,0 +1,56 @@
+<div class="glide">
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            {{#each accounts as |account|}}
+                <li class="glide__slide glidejs-card-wrapper">{{account-card account=account}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+        {{#each accounts as |account index|}}
+            <button class="glide__bullet" data-glide-dir="={{index}}"></button>
+        {{/each}}
+    </div>
+</div>
+
+<section class="library-props glidejs">
+    <p class="param animation-duration">
+        Animation Speed: 
+        <input type="number" value={{animationDuration}} onchange={{action "updateAnimationDuration" }} />
+    </p>
+    <p class="param param-direction">
+        Autoplay: 
+        <button 
+            class="autoplay-toggle"
+            onclick={{action "toggleAutoPlay"}}
+        >{{if autoPlay 'Turn Off Autoplay' 'Turn On Autoplay'}}</button>
+    </p>
+    <p class="param param-direction">
+        Rewind: 
+        <button 
+            class="rewind-toggle"
+            onclick={{action "toggleRewind"}}
+        >{{if rewind 'Turn Off Rewind' 'Turn On Rewind'}}</button>
+    </p>
+    <p class="param rewind-duration">
+        Rewind Speed: 
+        <input type="number" value={{rewindDuration}} onchange={{action "updateRewindDuration" }} />
+    </p>
+    <p class="param gap">
+        Slide Gap: 
+        <input type="number" value={{gap}} onchange={{action "updateSlideGap" }} />
+    </p>
+    <p class="param per-view">
+        Slide Per View: 
+        <input type="number" value={{perView}} onchange={{action "updateSlidesPerView" }} />
+    </p>
+    <p class="param per-view">
+        Swipe Threshold: 
+        <input type="number" value={{swipeThreshold}} onchange={{action "updateSwipeThreshold" }} />
+    </p>
+    <p class="param per-view">
+        Drag Threshold: 
+        <input type="number" value={{dragThreshold}} onchange={{action "updateDragThreshold" }} />
+    </p>
+</section>

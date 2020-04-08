@@ -28,7 +28,7 @@ export default Component.extend({
         }
     },
 
-    initSwipe() {
+    initSwipejs() {
         this.swipejsInstance = new Swipe(document.getElementById(this.componentID), {
             startSlide: 0,
             speed: this.speed,
@@ -39,15 +39,19 @@ export default Component.extend({
             stopPropagation: false,
             ignore: ".scroller",
             callback: function(index, elem, dir) {},
-            transitionEnd: function(index, elem) {}
+            transitionEnd: function(index, elem) {},
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
         });
     },
 
     didInsertElement() {
-        this.initSwipe();
+        this.initSwipejs();
     },
 
     didRender() {
-        this.initSwipe();
+        this.initSwipejs();
     }
 });
